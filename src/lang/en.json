@@ -1,0 +1,16 @@
+{
+    "hello": "Hello!",
+    "register_form:register_title": "Registration Form:",
+    "register_form:first_name": "First name",
+    "register_form:last_name": "Last name",
+    "register_form:required_field": "This field is required",
+    "register_form:required_field_3_chars": "This field is required and must be at least 3 characters long",
+    "register_form:submit_button": "Submit",
+    "register_form:form_data_title": "Form data:",
+    "register_form:live_data_title": "Live form data:",
+    "app:language_selector": "Language selector",
+    "app:spanish": "Spanish",
+    "app:english": "English",
+    "app:french": "French",
+    "app:change": "Change"
+  }

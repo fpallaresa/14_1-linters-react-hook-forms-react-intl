@@ -1,0 +1,16 @@
+{
+    "hello": "Bonjour!",
+    "register_form:register_title": "Formulaire d'inscription:",
+    "register_form:first_name": "Prénom",
+    "register_form:last_name": "Nom de famille",
+    "register_form:required_field": "Ce champ est obligatoire",
+    "register_form:required_field_3_chars": "Ce champ est obligatoire et doit contenir au moins 3 caractères",
+    "register_form:submit_button": "Soumettre",
+    "register_form:form_data_title": "Données du formulaire:",
+    "register_form:live_data_title": "Données en temps réel du formulaire:",
+    "app:language_selector": "Sélecteur de langue",
+    "app:spanish": "Espagnol",
+    "app:english": "Anglais",
+    "app:french": "Français",
+    "app:change": "Changer"
+  }

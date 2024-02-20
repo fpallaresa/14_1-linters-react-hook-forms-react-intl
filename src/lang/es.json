@@ -1,0 +1,16 @@
+{
+    "hello": "¡Hola!",
+    "register_form:register_title": "Formulario de registro:",
+    "register_form:first_name": "Nombre",
+    "register_form:last_name": "Apellido",
+    "register_form:required_field": "Este campo es requerido",
+    "register_form:required_field_3_chars": "Este campo es requerido y debe tener al menos 3 caracteres",
+    "register_form:submit_button": "Aceptar",
+    "register_form:form_data_title": "Datos del formulario:",
+    "register_form:live_data_title": "Datos del formulario en \"caliente\":",
+    "app:language_selector": "Selector de idioma",
+    "app:spanish": "Español",
+    "app:english": "Inglés",
+    "app:french": "Francés",
+    "app:change": "Cambiar"
+  }

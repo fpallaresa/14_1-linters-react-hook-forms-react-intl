@@ -1,0 +1,11 @@
+.register-form {
+    &__fieldset {
+        border: none;
+        box-shadow: none;
+    }
+
+    &__error {
+        color: red;
+        margin: 5px 0 0 0;
+    }
+}
