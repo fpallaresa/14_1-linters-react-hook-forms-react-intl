@@ -1,6 +1,6 @@
 import './App.scss';
 import RegisterForm from './components/RegisterForm/RegisterForm';
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import Spanish from './lang/es.json';
 import French from './lang/fr.json';
@@ -23,8 +23,8 @@ switch (locale) {
 }
 
 function App() {
-  const [selectedLanguage, setSelectedLanguage] = useState(defaultMessages);
-  const selectRef = useRef(null);
+  const [selectedLanguage, setSelectedLanguage] = React.useState(defaultMessages);
+  const selectRef = React.useRef(null);
 
   const handleChangeLanguage = () => {
     const selectedValue = selectRef.current.value;
