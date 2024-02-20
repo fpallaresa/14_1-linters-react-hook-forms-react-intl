@@ -15,11 +15,9 @@ const RegisterForm = () => {
   const onSubmit = (data) => setFormData(data);
   const { formatMessage } = useIntl();
 
-  // Prueba de mensaje traducido en Javascript
-  console.log(formatMessage({ id: 'hello' }));
-
   return (
     <div className='register-form'>
+      <h2 className='register-form__title'><FormattedMessage id='register_form:register_title' /></h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset className='register-form__fieldset'>
           <input placeholder={formatMessage({ id: 'register_form:first_name' })} type='text' {...register('firstName', { required: true })} />
@@ -37,16 +35,16 @@ const RegisterForm = () => {
             </p>
           )}
         </fieldset>
-        <button type='submit'>Aceptar</button>
+        <button type='submit'><FormattedMessage id='register_form:submit_button' /></button>
       </form>
 
-      <h2>Datos del formulario:</h2>
-      <p>First name: {formData?.firstName}</p>
-      <p>Last name: {formData?.lastName}</p>
+      <h2 className='register-form__title'><FormattedMessage id='register_form:form_data_title' /></h2>
+      <p><FormattedMessage id='register_form:first_name' />: {formData?.firstName}</p>
+      <p><FormattedMessage id='register_form:last_name' />: {formData?.lastName}</p>
 
-      <h2>Datos del formulario en "caliente":</h2>
-      <p>First name: {watch('firstName')}</p>
-      <p>Last name: {watch('lastName')}</p>
+      <h2 className='register-form__title'><FormattedMessage id='register_form:live_data_title' /></h2>
+      <p><FormattedMessage id='register_form:first_name' />: {watch('firstName')}</p>
+      <p><FormattedMessage id='register_form:last_name' />: {watch('lastName')}</p>
     </div>
   );
 };

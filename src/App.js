@@ -1,7 +1,7 @@
 import './App.scss';
 import RegisterForm from './components/RegisterForm/RegisterForm';
-import React from 'react';
-import { IntlProvider } from 'react-intl';
+import React, { useState, useRef } from 'react';
+import { IntlProvider, FormattedMessage } from 'react-intl';
 import Spanish from './lang/es.json';
 import French from './lang/fr.json';
 import English from './lang/en.json';
@@ -23,24 +23,36 @@ switch (locale) {
 }
 
 function App() {
-  const [messages, setMessages] = React.useState(defaultMessages);
+  const [selectedLanguage, setSelectedLanguage] = useState(defaultMessages);
+  const selectRef = useRef(null);
 
-  const handleLanguageChange = (selectedMessages) => {
-    setMessages(selectedMessages);
+  const handleChangeLanguage = () => {
+    const selectedValue = selectRef.current.value;
+    setSelectedLanguage(JSON.parse(selectedValue));
   };
 
   return (
-    <IntlProvider locale={locale} messages={messages}>
+    <IntlProvider locale={locale} messages={selectedLanguage}>
       <div className='App'>
         <RegisterForm />
+        <h2 className='App__language'>
+          <FormattedMessage id='app:language_selector' />
+        </h2>
+        <select className='App__language-select' ref={selectRef}>
+          <option value={JSON.stringify(Spanish)}>
+            <FormattedMessage id='app:spanish' />
+          </option>
+          <option value={JSON.stringify(English)}>
+            <FormattedMessage id='app:english' />
+          </option>
+          <option value={JSON.stringify(French)}>
+            <FormattedMessage id='app:french' />
+          </option>
+        </select>
+        <button className='App__change-button' onClick={handleChangeLanguage}>
+          <FormattedMessage id='app:change' />
+        </button>
       </div>
-
-      <h2>Selector de idioma</h2>
-      <select onChange={(e) => handleLanguageChange(JSON.parse(e.target.value))}>
-        <option value={JSON.stringify(Spanish)}>Spanish</option>
-        <option value={JSON.stringify(English)}>English</option>
-        <option value={JSON.stringify(French)}>French</option>
-      </select>
     </IntlProvider>
   );
 }
